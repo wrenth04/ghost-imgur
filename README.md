@@ -3,6 +3,21 @@ imgur store for ghost blog.
 
 ## Installation
 
+### Method 1 with npm
+- Install package
+  ```
+  npm install --save ghost-imgur
+  ```
+
+- Create `$path_to_ghost/content/storage/ghost-imgur/index.js`
+  ```
+  'use strict';
+  module.exports = require('ghost-imgur');
+  ```
+
+
+### Method 2 with repo
+
 - Create `storage` folder
 
   ```
