@@ -3,7 +3,7 @@ imgur storage for ghost blog.
 
 ## Installation
 
-### Method 1 with npm
+### Method 1 via npm
 - Install package
   ```
   npm install --save ghost-imgur
@@ -16,7 +16,7 @@ imgur storage for ghost blog.
   ```
 
 
-### Method 2 with repo
+### Method 2 via repo
 
 - Create `storage` folder
 
