@@ -20,6 +20,7 @@ ghostImgur.prototype.save = function(file) {
 
 ghostImgur.prototype.serve = function() {
   return function(req, res, next) {
+    next();
   };
 }
 
