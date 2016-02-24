@@ -1,5 +1,5 @@
 # ghost-imgur
-imgur store for ghost blog.
+imgur storage for ghost blog.
 
 ## Installation
 

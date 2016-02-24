@@ -1,7 +1,7 @@
 {
   "name": "ghost-imgur",
-  "version": "0.0.3",
-  "description": "imgur store for ghost blog.",
+  "version": "0.0.4",
+  "description": "imgur storage for ghost blog.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
