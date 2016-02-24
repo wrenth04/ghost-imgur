@@ -53,5 +53,5 @@ storage: {
 
 ## License
 
-Read [LICENSE](LICENSE)
+[MIT LICENSE](LICENSE)
 
