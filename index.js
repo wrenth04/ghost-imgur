@@ -13,6 +13,7 @@ function ghostImgur(config) {
 util.inherits(ghostImgur, BaseStorage);
 
 ghostImgur.prototype.save = function(file) {
+  // TODO: save delete url
   return new Promise(function(resolve, reject) {
     imgur.uploadFile(file.path)
       .then(function(json) {
@@ -28,5 +29,19 @@ ghostImgur.prototype.serve = function() {
     next();
   };
 }
+
+ghostImgur.prototype.exists = function(filename) {                        
+  return new Promise(function(resolve) {                                  
+    // TODO: check file status                                            
+    resolve(true);                                                        
+  });                                                                     
+}                                                                         
+                                                                          
+ghostImgur.prototype.delete = function(fileName, targetDir) {             
+  // TODO: delete image by url                                            
+  return new Promise(function(resolve) {                                  
+    resolve(false);                                                       
+  });                                                                     
+};
 
 module.exports = ghostImgur;
