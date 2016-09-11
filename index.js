@@ -18,7 +18,7 @@ ghostImgur.prototype.save = function(file) {
     imgur.uploadFile(file.path)
       .then(function(json) {
         if(!json || !json.data || !json.data.link) return reject();
-        resolve(json.data.link);
+        resolve(json.data.link.replace(/^http:\/\//i, 'https://'));
       })
       .catch(reject);
   });
