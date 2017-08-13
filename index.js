@@ -3,37 +3,34 @@
 'use strict';
 
 var Promise = require('bluebird'),
-    StorageBase = require('ghost-storage-base'),
+    BaseStorage = require('ghost-storage-base'),
     imgur = require('imgur');
 
-class ImgurStore extends StorageBase {
+class ImgurStorage extends BaseStorage {
     constructor() {
         super();
     }
 
     save(image) {
       // TODO: save delete url
-      return new Promise(function(resolve, reject) {
-        imgur.uploadFile(image.path)
-          .then(function(json) {
-            if(!json || !json.data || !json.data.link) return reject();
-            resolve(json.data.link);
-          })
-          .catch(reject);
-      });
+      return imgur.uploadFile(image.path)
+        .then(function(json) {
+          return json.data.link;
+        })
+        .catch(function(err) {
+          return Promise.reject(err.message);
+        });
     }
 
     exists(fileName, targetDir) {
       // TODO: check file status
-      return new Promise(function(resolve) {
-        resolve(true);
-      });
+      return Promise.resolve(true);
     }
 
     serve() {
-      return function customServe(req, res, next) {
+      return function(req, res, next) {
         next();
-      }
+      };
     }
 
     delete() {
@@ -44,4 +41,4 @@ class ImgurStore extends StorageBase {
     }
 }
 
-module.exports = ImgurStore;
+module.exports = ImgurStorage;
