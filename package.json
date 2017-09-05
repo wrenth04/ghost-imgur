@@ -23,6 +23,7 @@
   "homepage": "https://github.com/wrenth04/ghost-imgur",
   "dependencies": {
     "bluebird": "^3.3.1",
-    "imgur": "^0.1.7"
+    "imgur": "^0.1.7",
+    "ghost-storage-base": "^0.0.1"
   }
 }
