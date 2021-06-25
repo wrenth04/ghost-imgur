@@ -11,31 +11,31 @@ imgur storage for ghost blog.
   npm install ghost-imgur
   ```
 
-- Make the storage folder if it doesn't exist
+- Make the `adapters` folder if it doesn't exist
 
   ```
-  mkdir content/storage
+  mkdir -p content/adapters/storage
   ```
 
 - Copy the module into the right location
 
   ```
-  cp -vR node_modules/ghost-imgur content/storage/ghost-imgur
+  cp -vR node_modules/ghost-imgur content/adapters/storage/ghost-imgur
   ```
 
 ### Method 2 via repo
 
-- Create `storage` folder
+- Create `adapters` folder
 
   ```
-  mkdir -p $path_to_ghost/content/storage
+  mkdir -p $path_to_ghost/content/adapters/storage
   
   ```
 
 - Clone this repo
 
   ```
-  cd $path_to_ghost/content/storage
+  cd $path_to_ghost/content/adapters/storage
   git clone https://github.com/wrenth04/ghost-imgur.git
   
   ```
@@ -43,7 +43,7 @@ imgur storage for ghost blog.
 - Install dependencies
 
   ```
-  cd $path_to_ghost/content/storage/ghost-imgur
+  cd $path_to_ghost/content/adapters/storage/ghost-imgur
   npm install
   
   ```
@@ -53,8 +53,8 @@ imgur storage for ghost blog.
 - Open `$path_to_ghost/config.js` add `storage` block
 
 ```js
-storage: {
-  active: 'ghost-imgur'
+"storage": {
+  "active": "ghost-imgur"
 }
 ```
 
